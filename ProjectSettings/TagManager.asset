@@ -47,5 +47,8 @@ TagManager:
   - name: decoration
     uniqueID: 2180110667
     locked: 0
+  - name: Player
+    uniqueID: 2669786455
+    locked: 0
   m_RenderingLayers:
   - Default
