@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - LargerRoom
+  - LargeRoom
   layers:
   - Default
   - TransparentFX
@@ -49,6 +51,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2669786455
+    locked: 0
+  - name: DarkOverlay
+    uniqueID: 1131682577
     locked: 0
   m_RenderingLayers:
   - Default
