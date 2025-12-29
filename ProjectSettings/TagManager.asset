@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LargerRoom
   - LargeRoom
+  - Heart
   layers:
   - Default
   - TransparentFX
