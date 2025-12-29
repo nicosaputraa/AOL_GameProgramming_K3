@@ -8,6 +8,7 @@ public class StartupLoader
     {
         Debug.Log("StartupLoader running | GameStarted = " + GameState.GameStarted);
 
+        // Kalau sudah klik Start, STOP redirect
         if (GameState.GameStarted) return;
 
         if (SceneManager.GetActiveScene().name != "MenuScene")
