@@ -35,9 +35,8 @@ public class MenuManager : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("Starting game...");
-        
-        // Load scene dengan mode Single (replace semua object)
-        SceneManager.LoadScene(gameSceneName, LoadSceneMode.Single);
+        GameState.GameStarted = true;
+        SceneManager.LoadScene("MapScene");
     }
 
     public void OpenOptions()
