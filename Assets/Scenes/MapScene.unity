@@ -3419,7 +3419,7 @@ MonoBehaviour:
   viewRange: 6
   attackRange: 2.5
   moveSpeed: 2
-  attackCooldown: 0.5
+  attackCooldown: 1
   maxHealth: 100
   enableWander: 1
   wanderRadius: 3
@@ -94697,7 +94697,7 @@ MonoBehaviour:
   viewRange: 6
   attackRange: 2.5
   moveSpeed: 2
-  attackCooldown: 0.5
+  attackCooldown: 1
   maxHealth: 100
   enableWander: 1
   wanderRadius: 3
@@ -95555,7 +95555,7 @@ MonoBehaviour:
   viewRange: 6
   attackRange: 2.5
   moveSpeed: 2
-  attackCooldown: 0.5
+  attackCooldown: 1
   maxHealth: 100
   enableWander: 1
   wanderRadius: 3
@@ -95991,7 +95991,7 @@ MonoBehaviour:
   viewRange: 6
   attackRange: 2.5
   moveSpeed: 2
-  attackCooldown: 0.5
+  attackCooldown: 1
   maxHealth: 100
   enableWander: 1
   wanderRadius: 3
