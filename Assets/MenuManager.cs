@@ -13,7 +13,7 @@ public class MenuManager : MonoBehaviour
     public GameObject optionPanel; // Optional: jika ada panel option
 
     [Header("Scene Settings")]
-    public string gameSceneName = "GameScene"; // Nama scene game Anda
+    public string gameSceneName = "MapScene"; // ✅ Nama scene game Anda
 
     void Start()
     {
@@ -35,11 +35,9 @@ public class MenuManager : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("Starting game...");
-        // Load scene game
-        SceneManager.LoadScene(gameSceneName);
         
-        // Atau jika ingin load scene berikutnya:
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        // Load scene dengan mode Single (replace semua object)
+        SceneManager.LoadScene(gameSceneName, LoadSceneMode.Single);
     }
 
     public void OpenOptions()
