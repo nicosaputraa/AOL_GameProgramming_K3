@@ -6,6 +6,9 @@ TagManager:
   tags:
   - LargerRoom
   - LargeRoom
+  - Enemy
+  - Heart
+  - Memory
   layers:
   - Default
   - TransparentFX
