@@ -1,14 +1,31 @@
 fileFormatVersion: 2
-guid: 79a9d1043655b5543a9c37ea527913f5
-AssetOrigin:
-  serializedVersion: 1
-  productId: 296458
-  packageName: Dungeon Tale - Fantasy RPG Sprites FX Tileset
-  packageVersion: 1.0
-  assetPath: Assets/Tileset/Dungeon Tale/Assets/Sprites/Torch.png
-  uploadId: 693043
+guid: f6d9c7db5fcb52740a8699442d6bd328
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 872197379851108399
+    second: skeleton_walk_strip8_0
+  - first:
+      213: 4224078750871075506
+    second: skeleton_walk_strip8_1
+  - first:
+      213: -9215703848282575061
+    second: skeleton_walk_strip8_2
+  - first:
+      213: -5382186930185117831
+    second: skeleton_walk_strip8_3
+  - first:
+      213: 7745555118710471366
+    second: skeleton_walk_strip8_4
+  - first:
+      213: 2402556856746158077
+    second: skeleton_walk_strip8_5
+  - first:
+      213: 1430363047907581255
+    second: skeleton_walk_strip8_6
+  - first:
+      213: 3026430599455344041
+    second: skeleton_walk_strip8_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -41,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -55,12 +72,12 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
-  spriteBorder: {x: 4, y: 4, z: 4, w: 4}
-  spriteGenerateFallbackPhysicsShape: 0
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -79,7 +96,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,246 +117,190 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Torch_0
+      name: skeleton_walk_strip8_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 27
-        width: 6
-        height: 10
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 40
+        y: 23
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 267e5899d74a90942bd6be19d6e26c18
-      internalID: -51606216
+      spriteID: f204d0855eaaa1c00800000000000000
+      internalID: 872197379851108399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch_1
+      name: skeleton_walk_strip8_1
       rect:
         serializedVersion: 2
-        x: 4
-        y: 3
-        width: 7
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 137
+        y: 23
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8badefe52e3f0414e9b7078ee1e0cfcd
-      internalID: 924432098
+      spriteID: 2ba32f86e31fe9a30800000000000000
+      internalID: 4224078750871075506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch_2
+      name: skeleton_walk_strip8_2
       rect:
         serializedVersion: 2
-        x: 21
-        y: 3
-        width: 6
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 234
+        y: 23
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2b8b07d233c136b46a69a798bb83a40e
-      internalID: 1490357468
+      spriteID: b2faae74d2e3b1080800000000000000
+      internalID: -9215703848282575061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch_3
+      name: skeleton_walk_strip8_3
       rect:
         serializedVersion: 2
-        x: 37
-        y: 3
-        width: 6
-        height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 330
+        y: 23
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b85e35b53feb21a43bba2f6d440303c8
-      internalID: 183475255
+      spriteID: 97fd097c081ae45b0800000000000000
+      internalID: -5382186930185117831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch_4
+      name: skeleton_walk_strip8_4
       rect:
         serializedVersion: 2
-        x: 53
-        y: 3
-        width: 6
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 426
+        y: 23
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 48bcddb023bea9b40b051adcae9cfb5f
-      internalID: -1110085748
+      spriteID: 6ca32feb75dbd7b60800000000000000
+      internalID: 7745555118710471366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch_5
+      name: skeleton_walk_strip8_5
       rect:
         serializedVersion: 2
-        x: 69
-        y: 3
-        width: 6
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 520
+        y: 23
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d0c4205a611290144a384011a43fef9e
-      internalID: 56135649
+      spriteID: df7a80f5bb8975120800000000000000
+      internalID: 2402556856746158077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch_6
+      name: skeleton_walk_strip8_6
       rect:
         serializedVersion: 2
-        x: 85
-        y: 3
-        width: 6
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 616
+        y: 23
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e1e7e0b7d1db85e429dd59333ba9412f
-      internalID: -600494246
+      spriteID: 74d506a1d9ba9d310800000000000000
+      internalID: 1430363047907581255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch_7
+      name: skeleton_walk_strip8_7
       rect:
         serializedVersion: 2
-        x: 101
-        y: 3
-        width: 6
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 712
+        y: 23
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: bb4a5c9a092d41548a1f55b72dd9e4fb
-      internalID: -1166104483
+      spriteID: 9a588e1789a000a20800000000000000
+      internalID: 3026430599455344041
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
     customData: 
-    physicsShape:
-    - - {x: -128, y: 128}
-      - {x: -128, y: -128}
-      - {x: 128, y: -128}
-      - {x: 128, y: 128}
+    physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -349,14 +310,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Torch_0: -51606216
-      Torch_1: 924432098
-      Torch_2: 1490357468
-      Torch_3: 183475255
-      Torch_4: -1110085748
-      Torch_5: 56135649
-      Torch_6: -600494246
-      Torch_7: -1166104483
+      skeleton_walk_strip8_0: 872197379851108399
+      skeleton_walk_strip8_1: 4224078750871075506
+      skeleton_walk_strip8_2: -9215703848282575061
+      skeleton_walk_strip8_3: -5382186930185117831
+      skeleton_walk_strip8_4: 7745555118710471366
+      skeleton_walk_strip8_5: 2402556856746158077
+      skeleton_walk_strip8_6: 1430363047907581255
+      skeleton_walk_strip8_7: 3026430599455344041
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

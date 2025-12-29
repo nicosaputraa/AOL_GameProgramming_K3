@@ -1,14 +1,31 @@
 fileFormatVersion: 2
-guid: 79a9d1043655b5543a9c37ea527913f5
-AssetOrigin:
-  serializedVersion: 1
-  productId: 296458
-  packageName: Dungeon Tale - Fantasy RPG Sprites FX Tileset
-  packageVersion: 1.0
-  assetPath: Assets/Tileset/Dungeon Tale/Assets/Sprites/Torch.png
-  uploadId: 693043
+guid: e16b3e5a1e65716429b6ebc7ef36f736
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4030792056451597264
+    second: spr_idle_strip9_0
+  - first:
+      213: -5365564782989775432
+    second: spr_idle_strip9_1
+  - first:
+      213: 6715623495978055766
+    second: spr_idle_strip9_2
+  - first:
+      213: 3774113280150707286
+    second: spr_idle_strip9_3
+  - first:
+      213: -4501305681423134738
+    second: spr_idle_strip9_4
+  - first:
+      213: -8277829666597408865
+    second: spr_idle_strip9_5
+  - first:
+      213: -5244714908019811940
+    second: spr_idle_strip9_6
+  - first:
+      213: 6186845273662153763
+    second: spr_idle_strip9_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -41,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -55,12 +72,12 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
-  spriteBorder: {x: 4, y: 4, z: 4, w: 4}
-  spriteGenerateFallbackPhysicsShape: 0
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -79,7 +96,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,246 +117,190 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Torch_0
+      name: spr_idle_strip9_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 27
-        width: 6
-        height: 10
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 38
+        y: 24
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 267e5899d74a90942bd6be19d6e26c18
-      internalID: -51606216
+      spriteID: 03c7cbf0bffbf08c0800000000000000
+      internalID: -4030792056451597264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch_1
+      name: spr_idle_strip9_1
       rect:
         serializedVersion: 2
-        x: 4
-        y: 3
-        width: 7
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 134
+        y: 24
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8badefe52e3f0414e9b7078ee1e0cfcd
-      internalID: 924432098
+      spriteID: 8bd6c82024fa985b0800000000000000
+      internalID: -5365564782989775432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch_2
+      name: spr_idle_strip9_2
       rect:
         serializedVersion: 2
-        x: 21
-        y: 3
-        width: 6
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 230
+        y: 24
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2b8b07d233c136b46a69a798bb83a40e
-      internalID: 1490357468
+      spriteID: 658f90b1dffa23d50800000000000000
+      internalID: 6715623495978055766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch_3
+      name: spr_idle_strip9_3
       rect:
         serializedVersion: 2
-        x: 37
-        y: 3
-        width: 6
-        height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 326
+        y: 24
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b85e35b53feb21a43bba2f6d440303c8
-      internalID: 183475255
+      spriteID: 65c977d3808506430800000000000000
+      internalID: 3774113280150707286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch_4
+      name: spr_idle_strip9_4
       rect:
         serializedVersion: 2
-        x: 53
-        y: 3
-        width: 6
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 422
+        y: 24
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 48bcddb023bea9b40b051adcae9cfb5f
-      internalID: -1110085748
+      spriteID: eef8359e4562881c0800000000000000
+      internalID: -4501305681423134738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch_5
+      name: spr_idle_strip9_5
       rect:
         serializedVersion: 2
-        x: 69
-        y: 3
-        width: 6
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 518
+        y: 24
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d0c4205a611290144a384011a43fef9e
-      internalID: 56135649
+      spriteID: f9f654ba6cd3f1d80800000000000000
+      internalID: -8277829666597408865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch_6
+      name: spr_idle_strip9_6
       rect:
         serializedVersion: 2
-        x: 85
-        y: 3
-        width: 6
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 614
+        y: 24
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e1e7e0b7d1db85e429dd59333ba9412f
-      internalID: -600494246
+      spriteID: c99984f24970737b0800000000000000
+      internalID: -5244714908019811940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch_7
+      name: spr_idle_strip9_7
       rect:
         serializedVersion: 2
-        x: 101
-        y: 3
-        width: 6
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 710
+        y: 24
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: bb4a5c9a092d41548a1f55b72dd9e4fb
-      internalID: -1166104483
+      spriteID: 324efe04ff61cd550800000000000000
+      internalID: 6186845273662153763
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
     customData: 
-    physicsShape:
-    - - {x: -128, y: 128}
-      - {x: -128, y: -128}
-      - {x: 128, y: -128}
-      - {x: 128, y: 128}
+    physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -349,14 +310,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Torch_0: -51606216
-      Torch_1: 924432098
-      Torch_2: 1490357468
-      Torch_3: 183475255
-      Torch_4: -1110085748
-      Torch_5: 56135649
-      Torch_6: -600494246
-      Torch_7: -1166104483
+      spr_idle_strip9_0: -4030792056451597264
+      spr_idle_strip9_1: -5365564782989775432
+      spr_idle_strip9_2: 6715623495978055766
+      spr_idle_strip9_3: 3774113280150707286
+      spr_idle_strip9_4: -4501305681423134738
+      spr_idle_strip9_5: -8277829666597408865
+      spr_idle_strip9_6: -5244714908019811940
+      spr_idle_strip9_7: 6186845273662153763
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,14 +1,46 @@
 fileFormatVersion: 2
-guid: b8ff9f92921bd034988e1918ac97dcb4
-AssetOrigin:
-  serializedVersion: 1
-  productId: 296458
-  packageName: Dungeon Tale - Fantasy RPG Sprites FX Tileset
-  packageVersion: 1.0
-  assetPath: Assets/Tileset/Dungeon Tale/Assets/Sprites/Bubbles.png
-  uploadId: 693043
+guid: b43b6e157bbbf614d803196982306d3b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1533900097129813187
+    second: spr_reeling_strip13_0
+  - first:
+      213: 865284487732118567
+    second: spr_reeling_strip13_1
+  - first:
+      213: 6045908828217616353
+    second: spr_reeling_strip13_2
+  - first:
+      213: -3530493363056802747
+    second: spr_reeling_strip13_3
+  - first:
+      213: 8650584841659060628
+    second: spr_reeling_strip13_4
+  - first:
+      213: 9185527556403305397
+    second: spr_reeling_strip13_5
+  - first:
+      213: -4725398589571686922
+    second: spr_reeling_strip13_6
+  - first:
+      213: -4868781937495825775
+    second: spr_reeling_strip13_7
+  - first:
+      213: -2754618380963781951
+    second: spr_reeling_strip13_8
+  - first:
+      213: 3514463554822687503
+    second: spr_reeling_strip13_9
+  - first:
+      213: -2525243343209026943
+    second: spr_reeling_strip13_10
+  - first:
+      213: -1046956547389878701
+    second: spr_reeling_strip13_11
+  - first:
+      213: 6631323712695221622
+    second: spr_reeling_strip13_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -41,7 +73,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -55,12 +87,12 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
-  spriteBorder: {x: 4, y: 4, z: 4, w: 4}
-  spriteGenerateFallbackPhysicsShape: 0
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -79,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,378 +132,300 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bubbles_0
+      name: spr_reeling_strip13_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 84
-        width: 18
-        height: 21
+        x: 38
+        y: 66
+        width: 42
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 17e79689c1d51834c88ca465e7d95a4b
-      internalID: -905777709
+      spriteID: 3c41c5ae202894510800000000000000
+      internalID: 1533900097129813187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_1
+      name: spr_reeling_strip13_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 63
-        width: 18
-        height: 21
+        x: 133
+        y: 66
+        width: 43
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e636e968b10f8e5419f26995ef02952f
-      internalID: -750805466
+      spriteID: 724cde838ab120c00800000000000000
+      internalID: 865284487732118567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_2
+      name: spr_reeling_strip13_2
       rect:
         serializedVersion: 2
-        x: 18
-        y: 63
-        width: 18
-        height: 21
+        x: 228
+        y: 66
+        width: 44
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9e79e0f2be6cc5c4f8cdf1d62a747efb
-      internalID: -939516873
+      spriteID: 1e72f42fb0267e350800000000000000
+      internalID: 6045908828217616353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_3
+      name: spr_reeling_strip13_3
       rect:
         serializedVersion: 2
-        x: 36
-        y: 63
-        width: 18
-        height: 21
+        x: 323
+        y: 66
+        width: 45
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4b55c57c335253447bd43bab93bfd82a
-      internalID: -389217451
+      spriteID: 544002dddfa210fc0800000000000000
+      internalID: -3530493363056802747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_4
+      name: spr_reeling_strip13_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 42
-        width: 18
-        height: 21
+        x: 419
+        y: 66
+        width: 45
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d43e7c6b498ec634fabfcca12d199eee
-      internalID: -264984660
+      spriteID: 491977aa41d0d0870800000000000000
+      internalID: 8650584841659060628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_5
+      name: spr_reeling_strip13_5
       rect:
         serializedVersion: 2
-        x: 18
-        y: 42
-        width: 18
-        height: 21
+        x: 516
+        y: 66
+        width: 44
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4e61881cb5694214d9dc35150cc9173a
-      internalID: 2120583366
+      spriteID: 5bb1bf145ac897f70800000000000000
+      internalID: 9185527556403305397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_6
+      name: spr_reeling_strip13_6
       rect:
         serializedVersion: 2
-        x: 36
-        y: 42
-        width: 18
-        height: 21
+        x: 613
+        y: 66
+        width: 43
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 775771e251a001b48b6af58de04394ec
-      internalID: -371733336
+      spriteID: 6fd927ed4030c6eb0800000000000000
+      internalID: -4725398589571686922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_7
+      name: spr_reeling_strip13_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 21
-        width: 18
-        height: 21
+        x: 710
+        y: 66
+        width: 42
+        height: 39
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a8080ae983bb79b4c8746b24b3e5ef47
-      internalID: -1242826147
+      spriteID: 19229beaf9c9e6cb0800000000000000
+      internalID: -4868781937495825775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_8
+      name: spr_reeling_strip13_8
       rect:
         serializedVersion: 2
-        x: 18
-        y: 21
-        width: 18
-        height: 21
+        x: 807
+        y: 66
+        width: 41
+        height: 39
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e4de2386a97a14944a0c7b68c46cc072
-      internalID: -326805068
+      spriteID: 1c264e65d21a5c9d0800000000000000
+      internalID: -2754618380963781951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_9
+      name: spr_reeling_strip13_9
       rect:
         serializedVersion: 2
-        x: 36
-        y: 21
-        width: 18
-        height: 21
+        x: 903
+        y: 66
+        width: 41
+        height: 39
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: cffedefefceee4440b612af8770bf044
-      internalID: -1650054948
+      spriteID: f0b43419bf1e5c030800000000000000
+      internalID: 3514463554822687503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_10
+      name: spr_reeling_strip13_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 18
-        height: 21
+        x: 39
+        y: 2
+        width: 41
+        height: 39
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b8ccfd251dba92249bfa32640488ee0e
-      internalID: 1556216499
+      spriteID: 18a2b940f8884fcd0800000000000000
+      internalID: -2525243343209026943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_11
+      name: spr_reeling_strip13_11
       rect:
         serializedVersion: 2
-        x: 18
-        y: 0
-        width: 18
-        height: 21
+        x: 135
+        y: 2
+        width: 41
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7836a35f151f66e499ac5493c0598ed6
-      internalID: -212686125
+      spriteID: 35e8e8131967871f0800000000000000
+      internalID: -1046956547389878701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_12
+      name: spr_reeling_strip13_12
       rect:
         serializedVersion: 2
-        x: 36
-        y: 0
-        width: 18
-        height: 21
+        x: 231
+        y: 2
+        width: 41
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 432cd6d8fd6212347a4c85db9fe02048
-      internalID: -543087167
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bubbles_13
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 0
-        width: 18
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88e4b50170718f8428e646ccc0352222
-      internalID: 548909345
+      spriteID: 67db2dd48c1370c50800000000000000
+      internalID: 6631323712695221622
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
     customData: 
-    physicsShape:
-    - - {x: -128, y: 128}
-      - {x: -128, y: -128}
-      - {x: 128, y: -128}
-      - {x: 128, y: 128}
+    physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -481,20 +435,19 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bubbles_0: -905777709
-      Bubbles_1: -750805466
-      Bubbles_10: 1556216499
-      Bubbles_11: -212686125
-      Bubbles_12: -543087167
-      Bubbles_13: 548909345
-      Bubbles_2: -939516873
-      Bubbles_3: -389217451
-      Bubbles_4: -264984660
-      Bubbles_5: 2120583366
-      Bubbles_6: -371733336
-      Bubbles_7: -1242826147
-      Bubbles_8: -326805068
-      Bubbles_9: -1650054948
+      spr_reeling_strip13_0: 1533900097129813187
+      spr_reeling_strip13_1: 865284487732118567
+      spr_reeling_strip13_10: -2525243343209026943
+      spr_reeling_strip13_11: -1046956547389878701
+      spr_reeling_strip13_12: 6631323712695221622
+      spr_reeling_strip13_2: 6045908828217616353
+      spr_reeling_strip13_3: -3530493363056802747
+      spr_reeling_strip13_4: 8650584841659060628
+      spr_reeling_strip13_5: 9185527556403305397
+      spr_reeling_strip13_6: -4725398589571686922
+      spr_reeling_strip13_7: -4868781937495825775
+      spr_reeling_strip13_8: -2754618380963781951
+      spr_reeling_strip13_9: 3514463554822687503
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
