@@ -1,15 +1,23 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class GameUIManager : MonoBehaviour
 {
     [Header("UI References")]
     public GameObject popupPanel; // Panel Popup yang berisi slider & tombol quit
-    public Slider volumeSlider;   // Slider volume
+    public Slider masterSlider;   // Slider volume
+    public Slider musicSlider; // Slider untuk Group A
+    public Slider effectSlider; // Slider untuk Group B
+    public Slider dialogSlider; // Slider untuk Group B
 
     [Header("Scene Settings")]
     public string menuSceneName = "MenuScene";
+
+    [Header("Audio Settings")]
+    public AudioMixer AudioMixer; // Masukkan MainMixer di sini
+    private bool result;
 
     void Start()
     {
@@ -18,13 +26,45 @@ public class GameUIManager : MonoBehaviour
             popupPanel.SetActive(false);
 
         // 2. Setup Slider agar sesuai volume saat ini
-        if (volumeSlider != null)
+        if (masterSlider != null)
         {
-            volumeSlider.value = AudioListener.volume;
-            volumeSlider.onValueChanged.AddListener(SetVolume);
+            masterSlider.value = 1f;
+            masterSlider.onValueChanged.AddListener(SetLevelMaster);
+        }
+        if (musicSlider != null)
+        {
+            musicSlider.value = 1f;
+            musicSlider.onValueChanged.AddListener(SetLevelMusic);
+        }
+        if (effectSlider != null)
+        {
+            effectSlider.value = 1f;
+            effectSlider.onValueChanged.AddListener(SetLevelEffect);
+        }
+        if (dialogSlider != null)
+        {
+            dialogSlider.value = 1f;
+            dialogSlider.onValueChanged.AddListener(SetLevelDialog);
         }
     }
 
+    // Fungsi untuk Mixer
+    public void SetLevelMaster(float sliderValue)
+    {
+        AudioMixer.SetFloat("VolMaster", Mathf.Log10(sliderValue) * 20);
+    }
+    public void SetLevelMusic(float sliderValue)
+    {
+        AudioMixer.SetFloat("VolMusic", Mathf.Log10(sliderValue) * 20);
+    }
+    public void SetLevelEffect(float sliderValue)
+    {
+        AudioMixer.SetFloat("VolEffects", Mathf.Log10(sliderValue) * 20);
+    }
+    public void SetLevelDialog(float sliderValue)
+    {
+        AudioMixer.SetFloat("VolDialog", Mathf.Log10(sliderValue) * 20);
+    }
     // --- FUNGSI UNTUK TOMBOL ---
 
     // 1. Dipasang di 'Btn_OpenMenu'
