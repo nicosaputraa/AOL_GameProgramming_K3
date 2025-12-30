@@ -6,6 +6,8 @@ public class EnemyAI2D : MonoBehaviour
     public Transform player;
     public Animator animator;
     public Rigidbody2D rb;
+    public EnemySpawner spawner;
+
 
     [Header("Ranges")]
     public float viewRange = 6f;
@@ -18,10 +20,11 @@ public class EnemyAI2D : MonoBehaviour
     public float attackCooldown = 0.5f;
     private float lastAttackTime;
 
+
     [Header("Health")]
-    public int maxHealth = 100;
-    private int currentHealth;
-    private bool isDead = false;
+    public int maxHealth = 3;
+    int currentHealth;
+    bool isDead = false;
 
     [Header("Wander")]
     public bool enableWander = true;
@@ -149,25 +152,18 @@ public class EnemyAI2D : MonoBehaviour
         {
             Die();
         }
-        else
-        {
-            animator.SetTrigger("IsHurt");
-        }
     }
 
     void Die()
     {
         isDead = true;
 
+        rb.linearVelocity = Vector2.zero;
         animator.SetBool("IsDead", true);
 
-        rb.linearVelocity = Vector2.zero;
-        rb.simulated = false; // stop physics
+        if (spawner != null)
+            spawner.OnEnemyDied();
 
-        GetComponent<Collider2D>().enabled = false;
-
-        this.enabled = false; // stop AI
+        Destroy(gameObject, 1.2f);
     }
-
-
 }
