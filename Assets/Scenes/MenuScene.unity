@@ -1159,6 +1159,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1394863372}
   - {fileID: 1325305150}
   - {fileID: 1679412782}
   - {fileID: 1682013779}
@@ -1968,9 +1969,9 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1394863371}
         m_TargetAssemblyTypeName: GameUIManager, Assembly-CSharp
-        m_MethodName: QuitToMainMenu
+        m_MethodName: BackButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2026,11 +2027,11 @@ Transform:
   m_GameObject: {fileID: 1394863370}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -37.935165, y: -21.228401, z: -8.99927}
-  m_LocalScale: {x: 0.03937, y: 0.03937, z: 0.03937}
+  m_LocalPosition: {x: -4099.4624, y: -2294.0464, z: 0.078839965}
+  m_LocalScale: {x: 4.2545176, y: 4.2545176, z: 4.2545176}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 732487621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1493744312
 GameObject:
@@ -3970,5 +3971,4 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1166161745}
   - {fileID: 732487621}
-  - {fileID: 1394863372}
   - {fileID: 131324879}
