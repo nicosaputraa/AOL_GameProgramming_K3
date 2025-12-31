@@ -102,4 +102,15 @@ public class GameUIManager : MonoBehaviour
     {
         AudioListener.volume = volume;
     }
+    // 5. Dipasang di BackButton (Lobby)
+    public void BackButton()
+    {
+        if (popupPanel != null)
+        {
+            popupPanel.SetActive(false); // Tutup panel
+            Time.timeScale = 1f;         // Pastikan game jalan
+        }
+    }
+
 }
+
