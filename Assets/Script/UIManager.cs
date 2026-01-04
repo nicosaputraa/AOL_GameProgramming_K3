@@ -28,22 +28,22 @@ public class GameUIManager : MonoBehaviour
         // 2. Setup Slider agar sesuai volume saat ini
         if (masterSlider != null)
         {
-            masterSlider.value = 1f;
+            masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1f);
             masterSlider.onValueChanged.AddListener(SetLevelMaster);
         }
         if (musicSlider != null)
         {
-            musicSlider.value = 1f;
+            musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1f);
             musicSlider.onValueChanged.AddListener(SetLevelMusic);
         }
         if (effectSlider != null)
         {
-            effectSlider.value = 1f;
+            effectSlider.value = PlayerPrefs.GetFloat("EffectVolume", 1f);
             effectSlider.onValueChanged.AddListener(SetLevelEffect);
         }
         if (dialogSlider != null)
         {
-            dialogSlider.value = 1f;
+            dialogSlider.value = PlayerPrefs.GetFloat("DialogVolume", 1f);
             dialogSlider.onValueChanged.AddListener(SetLevelDialog);
         }
     }
@@ -52,18 +52,26 @@ public class GameUIManager : MonoBehaviour
     public void SetLevelMaster(float sliderValue)
     {
         AudioMixer.SetFloat("VolMaster", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("MasterVolume", sliderValue);
+        PlayerPrefs.Save();
     }
     public void SetLevelMusic(float sliderValue)
     {
         AudioMixer.SetFloat("VolMusic", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("MusicVolume", sliderValue);
+        PlayerPrefs.Save();
     }
     public void SetLevelEffect(float sliderValue)
     {
         AudioMixer.SetFloat("VolEffects", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("EffectVolume", sliderValue);
+        PlayerPrefs.Save();
     }
     public void SetLevelDialog(float sliderValue)
     {
         AudioMixer.SetFloat("VolDialog", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("DialogVolume", sliderValue);
+        PlayerPrefs.Save();
     }
     // --- FUNGSI UNTUK TOMBOL ---
 

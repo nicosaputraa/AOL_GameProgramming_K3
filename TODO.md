@@ -1,3 +1,3 @@
-# TODO List for Memory Object Interaction
-
-- [x] Edit Assets/Script/Player.cs to add else if condition in OnTriggerEnter2D for "Memory" tagged objects, destroying the object, and logging "Memory Fragments Collected" to the console.
+- [x] Fix VolumeSettings.cs to handle all volume sliders (Master, Music, Effect, Dialog) with proper saving/loading
+- [x] Update GameUIManager.cs to load saved volume values instead of defaulting to 1f
+- [x] Test volume persistence across scenes (requires attaching scripts to scenes)
