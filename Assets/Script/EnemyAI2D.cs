@@ -8,6 +8,9 @@ public class EnemyAI2D : MonoBehaviour
     public Rigidbody2D rb;
     public EnemySpawner spawner;
 
+    [Header("Knockback")]
+    public float knockbackForce = 4f;
+    public float knockbackDuration = 0.15f;
 
     [Header("Ranges")]
     public float viewRange = 6f;
@@ -18,93 +21,43 @@ public class EnemyAI2D : MonoBehaviour
 
     [Header("Attack")]
     public float attackCooldown = 0.5f;
-    private float lastAttackTime;
-
+    float lastAttackTime;
 
     [Header("Health")]
     public int maxHealth = 3;
     int currentHealth;
-    bool isDead = false;
-
-    [Header("Wander")]
-    public bool enableWander = true;
-    public float wanderRadius = 3f;
-    public float wanderSpeed = 1.5f;
-    public float wanderDelay = 2f;
-
-    private Vector2 wanderTarget;
-    private float wanderTimer;
-
+    bool isDead;
+    bool isKnockback;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player")?.transform;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
         currentHealth = maxHealth;
-
     }
 
     void Update()
     {
-        if (isDead) return;
+        if (isDead || isKnockback || player == null) return;
 
-        float distance = Vector2.Distance(transform.position, player.position);
+        float dist = Vector2.Distance(transform.position, player.position);
 
-        if (distance <= attackRange)
-        {
+        if (dist <= attackRange)
             Attack();
-        }
-        else if (distance <= viewRange)
-        {
+        else if (dist <= viewRange)
             Chase();
-        }
-        else if (enableWander)
-        {
-            Wander();
-        }
         else
-        {
             Idle();
-        }
-    }
-
-    void Wander()
-    {
-        wanderTimer -= Time.deltaTime;
-
-        if (wanderTimer <= 0f)
-        {
-            wanderTarget = (Vector2)transform.position + Random.insideUnitCircle * wanderRadius;
-            wanderTimer = wanderDelay;
-        }
-
-        Vector2 dir = (wanderTarget - (Vector2)transform.position);
-
-        if (dir.magnitude < 0.2f)
-        {
-            rb.linearVelocity = Vector2.zero;
-            animator.SetFloat("Speed", 0);
-            return;
-        }
-
-        dir = dir.normalized;
-        rb.linearVelocity = dir * wanderSpeed;
-
-        animator.SetFloat("Speed", rb.linearVelocity.magnitude);
-        Flip(dir.x);
     }
 
     void Chase()
     {
         Vector2 dir = (player.position - transform.position).normalized;
         rb.linearVelocity = dir * moveSpeed;
-
         animator.SetFloat("Speed", rb.linearVelocity.magnitude);
         Flip(dir.x);
     }
-
-
 
     void Attack()
     {
@@ -124,47 +77,47 @@ public class EnemyAI2D : MonoBehaviour
         animator.SetFloat("Speed", 0);
     }
 
-
     void Flip(float x)
     {
-        if (x > 0)
-            transform.localScale = new Vector3(1, 1, 1);
-        else if (x < 0)
-            transform.localScale = new Vector3(-1, 1, 1);
+        transform.localScale = new Vector3(x >= 0 ? 1 : -1, 1, 1);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void TakeDamage(int dmg)
     {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Player kena serang!");
-        }
-    }
+        if (isDead || isKnockback) return;
 
-    public void TakeDamage(int damage)
-    {
-        if (isDead) return;
+        currentHealth -= dmg;
+        animator.SetTrigger("hurt");
 
-        currentHealth -= damage;
+        StartCoroutine(Knockback());
 
         if (currentHealth <= 0)
-        {
             Die();
-        }
+    }
+
+    System.Collections.IEnumerator Knockback()
+    {
+        isKnockback = true;
+        rb.linearVelocity = Vector2.zero;
+
+        Vector2 dir = (transform.position - player.position).normalized;
+        rb.AddForce(dir * knockbackForce, ForceMode2D.Impulse);
+
+        yield return new WaitForSeconds(knockbackDuration);
+
+        rb.linearVelocity = Vector2.zero;
+        isKnockback = false;
     }
 
     void Die()
     {
         isDead = true;
-
         rb.linearVelocity = Vector2.zero;
         animator.SetBool("IsDead", true);
 
-        if (spawner != null)
-            spawner.OnEnemyDied();
+        if (spawner) spawner.OnEnemyDied();
+        if (QuestManager.Instance) QuestManager.Instance.AddProgress("Skeleton");
 
         Destroy(gameObject, 1.2f);
-
-        QuestManager.Instance?.AddProgress();
     }
 }

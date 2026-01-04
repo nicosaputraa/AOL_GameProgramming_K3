@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8543025041908335235}
   - component: {fileID: 7568745808552226871}
   - component: {fileID: 4653453163246961396}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Skeleton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -78,8 +78,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1625180841
-  m_SortingLayer: 4
+  m_SortingLayerID: 1238768299
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 6677806975911841103, guid: 572c8537ebc49a1438868b67c68ff621, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -108,11 +108,13 @@ MonoBehaviour:
   animator: {fileID: 4653453163246961396}
   rb: {fileID: 3860659085214136593}
   spawner: {fileID: 0}
+  knockbackForce: 4
+  knockbackDuration: 0.15
   viewRange: 4
   attackRange: 2.5
   moveSpeed: 4
   attackCooldown: 1
-  maxHealth: 10
+  maxHealth: 3
   enableWander: 1
   wanderRadius: 3
   wanderSpeed: 2
@@ -130,8 +132,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 6
+  m_AngularDamping: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -220,7 +222,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

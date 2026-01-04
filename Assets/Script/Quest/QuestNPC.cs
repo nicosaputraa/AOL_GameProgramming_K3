@@ -1,32 +1,50 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-public class QuestNPC : MonoBehaviour
-{
-    public GameObject chatBubble;
+public class QuestNPC : MonoBehaviour {
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Interact();
+    public GameObject dialogUI;
+    public Text questText;
+
+    bool playerNear;
+
+    void Start() {
+        dialogUI.SetActive(false);
+    }
+
+    void Update() {
+        if (playerNear && Input.GetKeyDown(KeyCode.E)) {
+            OpenDialog();
         }
     }
 
-    public void Interact()
-    {
+    void OpenDialog() {
         QuestData q = QuestManager.Instance.GetCurrentQuest();
         if (q == null) return;
 
-        chatBubble.SetActive(true);
+        questText.text = q.description;
+        dialogUI.SetActive(true);
+        Time.timeScale = 0f;
+    }
 
-        if (!q.completed)
-        {
-            Debug.Log("Quest: " + q.description);
+    public void AcceptQuest() {
+        dialogUI.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Player")) {
+            playerNear = true;
+            Debug.Log("Player in range of NPC");
         }
-        else
-        {
-            QuestManager.Instance.NextQuest();
-            Debug.Log("Quest Completed!");
+    }
+
+    void OnTriggerExit2D(Collider2D other) {
+        if (other.CompareTag("Player")) {
+            playerNear = false;
+            dialogUI.SetActive(false);
+            Time.timeScale = 1f;
+            Debug.Log("Player left NPC range");
         }
     }
 }

@@ -16,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -57,6 +57,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2669786455
+    locked: 0
+  - name: Enemy
+    uniqueID: 1238768299
     locked: 0
   - name: DarkOverlay
     uniqueID: 1131682577

@@ -1,9 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class QuestManager : MonoBehaviour
+public class ManagerPrototype : MonoBehaviour
 {
-    public static QuestManager Instance;
+    public static ManagerPrototype Instance;
 
     public List<QuestData> quests;
     public int currentQuestIndex;
@@ -27,12 +27,15 @@ public class QuestManager : MonoBehaviour
         if (q.targetID != targetID) return;
 
         q.currentAmount++;
+        Debug.Log("Quest Progress: " + q.currentAmount + "/" + q.targetAmount);
 
         if (q.currentAmount >= q.targetAmount) {
             q.completed = true;
+            Debug.Log("Quest Completed: " + q.questName);
             MemoryManager.Instance.UnlockNextMemory();
         }
     }
+
 
 
     public void NextQuest()
