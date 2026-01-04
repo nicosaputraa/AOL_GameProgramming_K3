@@ -118,7 +118,6 @@ public class EnemyAI2D : MonoBehaviour
         }
     }
 
-
     void Idle()
     {
         rb.linearVelocity = Vector2.zero;
@@ -165,5 +164,7 @@ public class EnemyAI2D : MonoBehaviour
             spawner.OnEnemyDied();
 
         Destroy(gameObject, 1.2f);
+
+        QuestManager.Instance?.AddProgress();
     }
 }
