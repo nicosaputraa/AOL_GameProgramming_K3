@@ -32,4 +32,14 @@ public class PlayerMovement : MonoBehaviour
         // Gerakkan karakter
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
+
+        void HandleFlip(float moveX)
+    {
+    if (moveX > 0)
+        transform.localScale = new Vector3(1,1,1);
+    else if (moveX < 0)
+        transform.localScale = new Vector3(-1,1,1);
+
+    }
+
 }

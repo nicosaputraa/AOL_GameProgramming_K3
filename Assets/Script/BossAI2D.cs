@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BossAI2D : MonoBehaviour
 {
+    
     public Transform player;
     private bool playerInsideRoom = false;
     private bool returningToSpawn = false;
@@ -31,6 +32,12 @@ public class BossAI2D : MonoBehaviour
     public float viewDistance = 6f;
     private bool isChasing;
 
+    [Header("Hurt")]
+    bool isHurt;
+    float hurtTimer;
+    public float hurtDuration = 0.25f;
+    public float knockbackForce = 4f;
+
 
     void Start()
     {
@@ -49,6 +56,18 @@ public class BossAI2D : MonoBehaviour
 
     void Update()   
     {
+    if (isDead)
+        return;
+
+    if (isHurt)
+    {
+        hurtTimer -= Time.deltaTime;
+        if (hurtTimer <= 0)
+            EndHurt();
+        return;
+    }
+
+
         if (returningToSpawn)
         {
             ReturnToSpawn();
@@ -178,16 +197,36 @@ public class BossAI2D : MonoBehaviour
     // ===== DAMAGE =====
     public void TakeDamage(int damage)
     {
-        if (isDead) return;
+        if (isDead || isHurt) return;
 
         currentHP -= damage;
-        animator.SetTrigger("Hurt");
+
+        isHurt = true;
+        hurtTimer = hurtDuration;
+
+        animator.SetBool("IsHurt", true);
+
+        rb.linearVelocity = Vector2.zero;
+
+        Vector2 dir = (transform.position - player.position).normalized;
+        rb.AddForce(dir * knockbackForce, ForceMode2D.Impulse);
 
         if (currentHP <= 0)
-        {
             Die();
-        }
     }
+
+    void EndHurt()
+{
+    isHurt = false;
+    animator.SetBool("IsHurt", false);
+    rb.linearVelocity = Vector2.zero;
+}
+
+        void ResetHurt()
+    {
+        isHurt = false;
+    }
+
 
     void Die()
     {

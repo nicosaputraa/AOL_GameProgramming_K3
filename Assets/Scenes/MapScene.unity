@@ -3090,7 +3090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  attackCooldown: 0.4
+  attackCooldown: 0.35
   attackDuration: 0.12
   boxSize: {x: 1.2, y: 1}
   enemyLayer:
@@ -111327,7 +111327,7 @@ GameObject:
   - component: {fileID: 1935707463}
   - component: {fileID: 1935707462}
   - component: {fileID: 1935707468}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -111506,8 +111506,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1625180841
-  m_SortingLayer: 4
+  m_SortingLayerID: 1238768299
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -750047184722822154, guid: 1914d95466e3d4341a618c35a56d5f82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -111549,7 +111549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 760504059}
   returnSpeed: 3
-  maxHP: 200
+  maxHP: 10
   moveSpeed: 5
   attackRange: 2.5
   attackCooldown: 1
@@ -112150,7 +112150,7 @@ GameObject:
   - component: {fileID: 2132010136}
   - component: {fileID: 2132010137}
   m_Layer: 0
-  m_Name: spr_idle_strip9_0
+  m_Name: NPCQuest1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

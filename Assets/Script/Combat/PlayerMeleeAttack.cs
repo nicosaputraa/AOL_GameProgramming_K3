@@ -32,23 +32,31 @@ public class PlayerMeleeAttack : MonoBehaviour
 
     public void DoDamage()
     {
-        float facing = Mathf.Sign(transform.localScale.x);
-        Vector2 center = (Vector2)transform.position + Vector2.right * facing * 0.7f;
+        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        Vector2 dir = (mouseWorld - transform.position).normalized;
+        Vector2 center = (Vector2)transform.position + dir * 0.7f;
 
-        Collider2D[] hits = Physics2D.OverlapBoxAll(center, new Vector2(1f, 1f), 0);
+        Collider2D[] hits = Physics2D.OverlapBoxAll(center, boxSize, 0);
 
         foreach (Collider2D hit in hits)
         {
-            if (!hit.CompareTag("Enemy")) continue;
-
-            EnemyAI2D enemy = hit.GetComponent<EnemyAI2D>();
+            // === Enemy biasa ===
+            EnemyAI2D enemy = hit.GetComponentInParent<EnemyAI2D>();
             if (enemy != null)
             {
-                enemy.TakeDamage(1);
-                Debug.Log("ENEMY DAMAGED");
+                enemy.TakeDamage(damage);
+                continue;
+            }
+
+            // === Boss ===
+            BossAI2D boss = hit.GetComponentInParent<BossAI2D>();
+            if (boss != null)
+            {
+                boss.TakeDamage(damage);
             }
         }
     }
+
 
 
     void OnDrawGizmos()
