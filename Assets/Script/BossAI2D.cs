@@ -186,6 +186,10 @@ public class BossAI2D : MonoBehaviour
         if (QuestManager.Instance != null)
             QuestManager.Instance.AddProgress(bossID);
 
+        if (EndingNPCSpawner.Instance != null)
+            EndingNPCSpawner.Instance.SpawnEndingNPC(transform.position);
+
+
         Destroy(gameObject, 1.5f);
     }
 }
