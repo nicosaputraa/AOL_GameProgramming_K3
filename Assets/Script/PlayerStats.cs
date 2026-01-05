@@ -1,41 +1,69 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI; // PENTING: Wajib ada untuk mengakses elemen UI
 
 public class PlayerStats : MonoBehaviour
 {
-    [Header("Settings")]
+    [Header("Health Settings")]
     public float maxHealth = 100f;
     public float currentHealth;
 
     [Header("UI Reference")]
-    public Image healthBarFill; // Drag Image "HealthBar_Fill" ke sini nanti
+    public Image healthBarImage; // Tempat kita menaruh UI Healthbar nanti
 
     void Start()
     {
+        // Set darah penuh saat game mulai
         currentHealth = maxHealth;
-        UpdateUI();
+        UpdateHealthUI();
     }
 
-    public void TakeDamage(float amount)
+    // Fungsi untuk menerima damage (panggil ini saat pemain terkena hit)
+    public void TakeDamage(float damage)
     {
-        currentHealth -= amount;
-        if (currentHealth < 0) currentHealth = 0;
-        UpdateUI();
+        currentHealth -= damage;
+
+        // Pastikan darah tidak kurang dari 0
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            
+            // --- TAMBAHAN BARU: Memanggil Game Over ---
+            // Mengecek apakah GameManager ada, lalu panggil fungsi Game Over
+            if (GameManager.instance != null)
+            {
+                GameManager.instance.TriggerGameOver();
+            }
+            else
+            {
+                Debug.LogWarning("GameManager belum dipasang di Scene!");
+            }
+            // ------------------------------------------
+        }
+
+        UpdateHealthUI();
     }
 
+    // Fungsi untuk menyembuhkan (healing)
     public void Heal(float amount)
     {
         currentHealth += amount;
-        if (currentHealth > maxHealth) currentHealth = maxHealth;
-        UpdateUI();
+
+        // Pastikan darah tidak melebihi batas maksimum
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+
+        UpdateHealthUI();
     }
 
-    void UpdateUI()
+    // Fungsi inti untuk mengubah tampilan UI
+    void UpdateHealthUI()
     {
-        if (healthBarFill != null)
+        // Rumus: Darah Sekarang / Darah Maksimum
+        if (healthBarImage != null)
         {
-            // Mengubah panjang bar berdasarkan persentase (0.0 sampai 1.0)
-            healthBarFill.fillAmount = currentHealth / maxHealth;
+            healthBarImage.fillAmount = currentHealth / maxHealth;
         }
     }
 }

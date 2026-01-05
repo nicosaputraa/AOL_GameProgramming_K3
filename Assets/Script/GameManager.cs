@@ -1,48 +1,53 @@
 using UnityEngine;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement; // Wajib ada untuk Reload Scene
 
-public class InventoryManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public GameObject slotPrefab;   
-    public Transform inventoryPanel; 
-    public int totalSlots = 10;     
+    // Singleton agar mudah dipanggil dari script PlayerStats
+    public static GameManager instance;
 
-    private List<InventorySlot> slots = new List<InventorySlot>();
+    [Header("UI References")]
+    public GameObject gameOverPanel; // Masukkan Panel Game Over di sini
 
-    void Start()
+    void Awake()
     {
-        // Membuat slot kosong saat game mulai
-        for (int i = 0; i < totalSlots; i++)
+        // Setup Singleton
+        if (instance == null)
         {
-            GameObject newSlot = Instantiate(slotPrefab, inventoryPanel);
-            InventorySlot slotScript = newSlot.GetComponent<InventorySlot>();
-            slotScript.ClearSlot();
-            slots.Add(slotScript);
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 
-    public void AddItem(string itemName, Sprite itemIcon)
+    public void TriggerGameOver()
     {
-        // 1. Cek Stack: Apakah barang sudah ada?
-        foreach (InventorySlot slot in slots)
+        // 1. Munculkan layar Game Over
+        if (gameOverPanel != null)
         {
-            if (slot.isOccupied && slot.itemName == itemName)
-            {
-                slot.StackItem();
-                return; 
-            }
+            gameOverPanel.SetActive(true);
         }
 
-        // 2. Cek Kosong: Cari slot baru
-        foreach (InventorySlot slot in slots)
-        {
-            if (!slot.isOccupied)
-            {
-                slot.AddItemToSlot(itemName, itemIcon);
-                return;
-            }
-        }
-        
-        Debug.Log("Inventory Penuh!");
+        // 2. Hentikan waktu (Game Pause otomatis)
+        Time.timeScale = 0f; 
+    }
+
+    // Fungsi untuk tombol RETRY (Mengulang dari awal)
+    public void RetryGame()
+    {
+        // PENTING: Kembalikan waktu ke normal sebelum reload scene
+        Time.timeScale = 1f;
+
+        // Reload scene yang sedang aktif (Reset total)
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    // Fungsi untuk tombol EXIT
+    public void ExitGame()
+    {
+        Debug.Log("Keluar dari Game...");
+        Application.Quit();
     }
 }
