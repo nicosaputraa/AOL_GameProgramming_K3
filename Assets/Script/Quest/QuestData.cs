@@ -3,7 +3,8 @@ using UnityEngine;
 public enum QuestType { Kill, Collect, Talk }
 
 [System.Serializable]
-public class QuestData {
+public class QuestData
+{
     public string questName;
     public string description;
 

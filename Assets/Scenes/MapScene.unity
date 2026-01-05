@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299
+  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299b7502a39
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299
+  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299b7502a39
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299
+  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299b7502a39
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1040,7 +1040,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -395.24, y: -253.1}
+  m_AnchoredPosition: {x: -395.24005, y: -253.09998}
   m_SizeDelta: {x: -817.25, y: -546.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &178351397
@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299
+  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299b7502a39
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1570,6 +1570,96 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 427428402}
   m_SourcePrefab: {fileID: 100100000, guid: ef88d2194a908694d8d68584fd384408, type: 3}
+--- !u!1 &342003803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 342003804}
+  - component: {fileID: 342003807}
+  - component: {fileID: 342003806}
+  - component: {fileID: 342003805}
+  m_Layer: 5
+  m_Name: QuestUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &342003804
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342003803}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2131820853}
+  m_Father: {fileID: 1583064789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 332.14996}
+  m_SizeDelta: {x: 253.49, y: 37.15}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &342003805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342003803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b76e4d92577d813459efc4047784dd08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: {fileID: 2131820854}
+--- !u!114 &342003806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342003803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &342003807
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342003803}
+  m_CullTransparentMesh: 1
 --- !u!1 &363771309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,7 +1799,7 @@ MonoBehaviour:
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299
+  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299b7502a39
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -2721,7 +2811,7 @@ MonoBehaviour:
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299
+  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299b7502a39
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -2858,7 +2948,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299
+  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299b7502a39
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -3404,7 +3494,7 @@ MonoBehaviour:
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299
+  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299b7502a39
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -3796,7 +3886,7 @@ MonoBehaviour:
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299
+  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299b7502a39
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -5817,7 +5907,7 @@ MonoBehaviour:
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299
+  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299b7502a39
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -98165,7 +98255,7 @@ MonoBehaviour:
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299
+  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299b7502a39
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -98827,7 +98917,7 @@ MonoBehaviour:
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299
+  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299b7502a39
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -99317,6 +99407,7 @@ RectTransform:
   - {fileID: 1013381829}
   - {fileID: 178351396}
   - {fileID: 1520352848}
+  - {fileID: 342003804}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -111664,11 +111755,12 @@ MonoBehaviour:
   - questName: Kill 3 Skeleton
     description: Kill 3 Skeleton to Complete this Quest
     questType: 0
-    targetID: 
+    targetID: Skeleton
     targetAmount: 3
     currentAmount: 0
     completed: 0
   currentQuestIndex: 0
+  questActive: 0
 --- !u!4 &1649218826
 Transform:
   m_ObjectHideFlags: 0
@@ -111724,7 +111816,7 @@ MonoBehaviour:
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299
+  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299b7502a39
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -111880,7 +111972,7 @@ MonoBehaviour:
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299
+  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299b7502a39
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -112536,7 +112628,7 @@ MonoBehaviour:
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299
+  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299b7502a39
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -113462,7 +113554,7 @@ MonoBehaviour:
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299
+  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299b7502a39
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -113690,7 +113782,7 @@ MonoBehaviour:
   m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299
+  m_ApplyToSortingLayers: 000000000fc938c14bd9f18157b5219f111b7443ad51d4b3fb1fecb7ab1ad649358b5299b7502a39
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -113942,6 +114034,142 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119890334}
   m_CullTransparentMesh: 1
+--- !u!1 &2131820852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2131820853}
+  - component: {fileID: 2131820855}
+  - component: {fileID: 2131820854}
+  m_Layer: 5
+  m_Name: QuestText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2131820853
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131820852}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 342003804}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2131820854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131820852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 12
+  m_fontSizeBase: 12
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2131820855
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131820852}
+  m_CullTransparentMesh: 1
 --- !u!1 &2132010129
 GameObject:
   m_ObjectHideFlags: 0
@@ -113958,6 +114186,8 @@ GameObject:
   - component: {fileID: 2132010136}
   - component: {fileID: 2132010137}
   - component: {fileID: 2132010138}
+  - component: {fileID: 2132010139}
+  - component: {fileID: 2132010140}
   m_Layer: 0
   m_Name: NPCQuest1
   m_TagString: Untagged
@@ -114197,6 +114427,31 @@ MonoBehaviour:
   - '"Kau... Echo, bukan?.  Dengar, 3 Skeleton mengancam tempat ini. Kalahkan mereka,
     dan mungkin aku tahu sesuatu tentang masa lalumu."'
   typingSpeed: 0.03
+--- !u!114 &2132010139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132010129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22d61936e1b0e6b4f8a6c8976cb4bf0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNear: 0
+--- !u!114 &2132010140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132010129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57126ce98d959f943b2e6b47beb3f863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2139083408
 GameObject:
   m_ObjectHideFlags: 0

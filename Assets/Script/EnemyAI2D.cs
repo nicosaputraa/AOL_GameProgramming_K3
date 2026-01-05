@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class EnemyAI2D : MonoBehaviour
 {
@@ -84,18 +85,19 @@ public class EnemyAI2D : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
-        if (isDead || isKnockback) return;
+        if (isDead) return;
 
         currentHealth -= dmg;
         animator.SetTrigger("hurt");
 
-        StartCoroutine(Knockback());
+        if (!isKnockback)
+            StartCoroutine(Knockback());
 
         if (currentHealth <= 0)
             Die();
     }
 
-    System.Collections.IEnumerator Knockback()
+    IEnumerator Knockback()
     {
         isKnockback = true;
         rb.linearVelocity = Vector2.zero;
@@ -111,12 +113,16 @@ public class EnemyAI2D : MonoBehaviour
 
     void Die()
     {
+        if (isDead) return;          // ⬅ CRITICAL FIX
         isDead = true;
+
         rb.linearVelocity = Vector2.zero;
         animator.SetBool("IsDead", true);
 
         if (spawner) spawner.OnEnemyDied();
-        if (QuestManager.Instance) QuestManager.Instance.AddProgress("Skeleton");
+
+        if (QuestManager.Instance != null)
+            QuestManager.Instance.AddProgress("Skeleton");
 
         Destroy(gameObject, 1.2f);
     }

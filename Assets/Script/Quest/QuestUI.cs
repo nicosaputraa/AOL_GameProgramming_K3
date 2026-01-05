@@ -1,34 +1,28 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class QuestUI : MonoBehaviour
 {
+    public static QuestUI Instance;
+    public TextMeshProUGUI questText;
 
-    void Update()
+    void Awake()
+    {
+        Instance = this;
+        questText.text = "";
+    }
+
+    public void Refresh()
     {
         QuestData q = QuestManager.Instance.GetCurrentQuest();
-        if (q == null) return;
 
-        questText.text = q.description;
-        progressBar.maxValue = q.targetAmount;
-        progressBar.value = q.currentAmount;
+        if (q == null)
+        {
+            questText.text = "";
+            return;
+        }
+
+        questText.text = q.description + 
+                        " (" + q.currentAmount + "/" + q.targetAmount + ")";
     }
-
-    public static QuestUI Instance;
-    public Text questText;
-    public Slider progressBar;
-
-    void Awake() {
-        Instance = this;
-    }
-
-    public void Refresh() {
-        QuestData q = QuestManager.Instance.GetCurrentQuest();
-        if (q == null) return;
-
-        questText.text = q.description;
-        progressBar.maxValue = q.targetAmount;
-        progressBar.value = q.currentAmount;
-    }
-
 }
