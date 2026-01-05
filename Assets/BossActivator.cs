@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class BossActivator : MonoBehaviour
 {
-    public MonoBehaviour bossAI;       
+    public GameObject bossObject;     // drag boss object (child)
+    public MonoBehaviour bossAI;
     public Collider2D bossCollider;
     public Animator bossAnimator;
 
@@ -18,7 +19,7 @@ public class BossActivator : MonoBehaviour
         if (activated) return;
         if (QuestManager.Instance == null) return;
 
-        if (QuestManager.Instance.currentQuestIndex >= 3)
+        if (QuestManager.Instance.currentQuestIndex >= 1)
         {
             ActivateBoss();
         }
@@ -26,18 +27,14 @@ public class BossActivator : MonoBehaviour
 
     void DeactivateBoss()
     {
-        if (bossAI != null) bossAI.enabled = false;
-        if (bossCollider != null) bossCollider.enabled = false;
-        if (bossAnimator != null) bossAnimator.enabled = false;
-
-        gameObject.SetActive(false);   // boss benar-benar hilang
+        bossObject.SetActive(false);
     }
 
     void ActivateBoss()
     {
         activated = true;
 
-        gameObject.SetActive(true);
+        bossObject.SetActive(true);
 
         if (bossAI != null) bossAI.enabled = true;
         if (bossCollider != null) bossCollider.enabled = true;
