@@ -11,6 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuScene.unity
     guid: 7702b67d5ef200f4ea2716a4c9860ed9
+  - enabled: 1
+    path: Assets/Scenes/NarrationScene.unity
+    guid: 2d181ea51b0b99741b419c315e0e1eff
+  - enabled: 1
+    path: Assets/Scenes/MemoryScene1.unity
+    guid: 065e9e1e25df90c49ab2f1e97dc1e429
+  - enabled: 1
+    path: Assets/Scenes/MemoryScene2.unity
+    guid: 63f93883e39214c4db0bc4ff1069d8fb
+  - enabled: 1
+    path: Assets/Scenes/MemoryScene3.unity
+    guid: 555518625a67e894caddf619bff70d3d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
