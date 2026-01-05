@@ -36,7 +36,7 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("Starting game...");
         GameState.GameStarted = true;
-        SceneManager.LoadScene("MapScene");
+        SceneManager.LoadScene("NarrationScene");
     }
 
     public void OpenOptions()
