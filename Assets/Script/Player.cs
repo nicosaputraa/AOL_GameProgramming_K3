@@ -4,11 +4,24 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public InventoryManager inventoryManager;
+    public PlayerStats playerStats;
+
+    [Header("Heart Settings")]
+    public float heartHealAmount = 15f;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Heart"))
         {
+            if (playerStats != null)
+            {
+                playerStats.Heal(heartHealAmount);
+            }
+            else
+            {
+                Debug.LogError("PlayerStats belum di-assign di Player!");
+            }
+
             Destroy(other.gameObject);
             Debug.Log("+15 HP");
         }
@@ -23,9 +36,7 @@ public class Player : MonoBehaviour
             }
 
             Debug.Log("Memory Fragment Collected: " + memory.memorySceneName);
-
             SceneManager.LoadScene(memory.memorySceneName, LoadSceneMode.Additive);
-
             Destroy(other.gameObject);
         }
         else if (other.CompareTag("Collectible"))

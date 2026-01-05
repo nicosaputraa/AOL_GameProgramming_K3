@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI; // PENTING: Wajib ada untuk mengakses elemen UI
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -26,18 +27,7 @@ public class PlayerStats : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            
-            // --- TAMBAHAN BARU: Memanggil Game Over ---
-            // Mengecek apakah GameManager ada, lalu panggil fungsi Game Over
-            if (GameManager.instance != null)
-            {
-                GameManager.instance.TriggerGameOver();
-            }
-            else
-            {
-                Debug.LogWarning("GameManager belum dipasang di Scene!");
-            }
-            // ------------------------------------------
+            SceneManager.LoadScene("GameOver");
         }
 
         UpdateHealthUI();

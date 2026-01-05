@@ -3860,6 +3860,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryManager: {fileID: 1520352849}
+  playerStats: {fileID: 760504069}
+  heartHealAmount: 15
 --- !u!114 &760504061
 MonoBehaviour:
   m_ObjectHideFlags: 0
