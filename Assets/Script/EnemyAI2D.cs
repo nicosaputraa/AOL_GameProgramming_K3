@@ -23,7 +23,7 @@ public class EnemyAI2D : MonoBehaviour
     [Header("Attack")]
     public float attackCooldown = 0.5f;
     // --- TAMBAHAN BARU 1: Variabel Damage Musuh ---
-    public float damageToPlayer = 10f; 
+    public float damageToPlayer = 5f; 
     // ----------------------------------------------
     float lastAttackTime;
 

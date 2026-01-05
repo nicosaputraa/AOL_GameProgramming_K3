@@ -4,14 +4,15 @@ public class BossAI2D : MonoBehaviour
 {
     public string bossID = "Boss";
     public Transform player;
-    private bool playerInsideRoom = false;
-    private bool returningToSpawn = false;
-    private Vector2 spawnPosition;
+
+    bool playerInsideRoom = false;
+    bool returningToSpawn = false;
+    Vector2 spawnPosition;
     public float returnSpeed = 3f;
 
     [Header("Stats")]
     public int maxHP = 200;
-    private int currentHP;
+    int currentHP;
 
     [Header("Movement")]
     public float moveSpeed = 2f;
@@ -19,18 +20,19 @@ public class BossAI2D : MonoBehaviour
 
     [Header("Attack")]
     public float attackCooldown = 2f;
-    private float attackTimer;
-    private bool isAttacking;
-    private bool isDead;
+    float attackTimer;
+    bool isAttacking;
+    bool isDead;
 
-    private Rigidbody2D rb;
-    private Animator animator;
+    [Header("Player Damage")]
+    public float damageToPlayer = 15f;
 
-    private bool facingRight = true;
+    Rigidbody2D rb;
+    Animator animator;
 
     [Header("Detection")]
     public float viewDistance = 6f;
-    private bool isChasing;
+    bool isChasing;
 
     [Header("Hurt")]
     bool isHurt;
@@ -38,39 +40,24 @@ public class BossAI2D : MonoBehaviour
     public float hurtDuration = 0.25f;
     public float knockbackForce = 4f;
 
-
     void Start()
     {
         spawnPosition = transform.position;
-
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
         currentHP = maxHP;
-        attackTimer = 0f;
-
-        // SAFETY
         rb.gravityScale = 0;
         rb.freezeRotation = true;
     }
 
-    void Update()   
+    void Update()
     {
-    if (isDead)
-        return;
+        if (isDead || player == null) return;
 
-    if (isHurt)
-    {
-        hurtTimer -= Time.deltaTime;
-        if (hurtTimer <= 0)
-            EndHurt();
-        return;
-    }
-
-
-        if (returningToSpawn)
+        if (isHurt)
         {
-            ReturnToSpawn();
+            hurtTimer -= Time.deltaTime;
+            if (hurtTimer <= 0) EndHurt();
             return;
         }
 
@@ -80,79 +67,38 @@ public class BossAI2D : MonoBehaviour
             return;
         }
 
-        if (isDead || player == null)
-            return;
+        float dist = Vector2.Distance(transform.position, player.position);
 
-        float distance = Vector2.Distance(transform.position, player.position);
+        if (!isChasing && dist <= viewDistance) isChasing = true;
+        if (isChasing && dist > viewDistance + 2f) isChasing = false;
+        if (!isChasing) { StopMoving(); return; }
 
-        // === DETECTION LOGIC ===
-        if (!isChasing && distance <= viewDistance)
-            isChasing = true;
+        if (attackTimer > 0) attackTimer -= Time.deltaTime;
+        if (isAttacking) return;
 
-        if (isChasing && distance > viewDistance + 2f) // buffer biar ga flicker
-            isChasing = false;
-
-        if (!isChasing)
-        {
-            StopMoving();
-            return;
-        }
-
-        // === ATTACK COOLDOWN ===
-        if (attackTimer > 0)
-            attackTimer -= Time.deltaTime;
-
-        if (isAttacking)
-            return;
-
-        if (distance > attackRange)
-        {
+        if (dist > attackRange)
             Chase();
-        }
         else if (attackTimer <= 0)
-        {
             StartAttack();
-        }
     }
 
     public void SetPlayerInsideRoom(bool inside)
     {
-        if (this == null || isDead) return;     // ⬅ PROTEKSI UTAMA
-        if (animator == null) return;
+        if (isDead) return;
 
         playerInsideRoom = inside;
-
         if (!inside)
         {
             isChasing = false;
             isAttacking = false;
-            returningToSpawn = true;
-            animator.SetBool("IsMoving", true);
         }
     }
-    void ReturnToSpawn()
-    {
-        Vector2 dir = spawnPosition - (Vector2)transform.position;
-
-        if (dir.magnitude < 0.1f)
-        {
-            returningToSpawn = false;
-            StopMoving();
-            return;
-        }
-
-        rb.linearVelocity = dir.normalized * returnSpeed;
-        HandleFacing();
-    }
-
 
     void Chase()
     {
         animator.SetBool("IsMoving", true);
-
-        Vector2 direction = (player.position - transform.position).normalized;
-        rb.linearVelocity = direction * moveSpeed;
-
+        Vector2 dir = (player.position - transform.position).normalized;
+        rb.linearVelocity = dir * moveSpeed;
         HandleFacing();
     }
 
@@ -166,12 +112,23 @@ public class BossAI2D : MonoBehaviour
     {
         isAttacking = true;
         StopMoving();
-
-        animator.ResetTrigger("Attack");
         animator.SetTrigger("Attack");
+
+        Invoke(nameof(DealDamageToPlayer), 0.35f);
     }
 
-    // DIPANGGIL DARI ANIMATION EVENT
+    void DealDamageToPlayer()
+    {
+        if (isDead || player == null) return;
+
+        float dist = Vector2.Distance(transform.position, player.position);
+        if (dist > attackRange + 0.2f) return;
+
+        PlayerStats stats = player.GetComponent<PlayerStats>();
+        if (stats != null)
+            stats.TakeDamage(damageToPlayer);
+    }
+
     public void EndAttack()
     {
         isAttacking = false;
@@ -181,35 +138,25 @@ public class BossAI2D : MonoBehaviour
     void HandleFacing()
     {
         if (rb.linearVelocity.x > 0)
-            transform.localScale = new Vector3(-1, 1, 1); // kanan
+            transform.localScale = new Vector3(-1, 1, 1);
         else if (rb.linearVelocity.x < 0)
-            transform.localScale = new Vector3(1, 1, 1);  // kiri
+            transform.localScale = new Vector3(1, 1, 1);
     }
 
-
-    void Flip()
-    {
-        facingRight = !facingRight;
-
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
-    }
-
-
-    // ===== DAMAGE =====
     public void TakeDamage(int damage)
     {
         if (isDead || isHurt) return;
 
         currentHP -= damage;
 
+        // ===== FIX BUG ATTACK TERKUNCI =====
+        isAttacking = false;                            // BARIS BARU
+        CancelInvoke(nameof(DealDamageToPlayer));       // BARIS BARU
+        // =================================
+
         isHurt = true;
         hurtTimer = hurtDuration;
-
         animator.SetBool("IsHurt", true);
-
-        rb.linearVelocity = Vector2.zero;
 
         Vector2 dir = (transform.position - player.position).normalized;
         rb.AddForce(dir * knockbackForce, ForceMode2D.Impulse);
@@ -219,42 +166,26 @@ public class BossAI2D : MonoBehaviour
     }
 
     void EndHurt()
-{
-    isHurt = false;
-    animator.SetBool("IsHurt", false);
-    rb.linearVelocity = Vector2.zero;
-}
-
-        void ResetHurt()
     {
         isHurt = false;
+        animator.SetBool("IsHurt", false);
     }
 
-
-        void Die()
+    void Die()
     {
         if (isDead) return;
-
         isDead = true;
 
         animator.SetBool("IsDead", true);
         rb.linearVelocity = Vector2.zero;
         rb.simulated = false;
 
-        // MATIKAN COLLIDER BIAR GA ADA GHOST HITBOX
         Collider2D col = GetComponent<Collider2D>();
-        if (col != null)
-            col.enabled = false;
+        if (col != null) col.enabled = false;
 
-        // LAPOR KE QUEST
         if (QuestManager.Instance != null)
             QuestManager.Instance.AddProgress(bossID);
 
-        // HANCURKAN SETELAH ANIMASI SELESAI
         Destroy(gameObject, 1.5f);
-
-        BossRoomTrigger trigger = FindObjectOfType<BossRoomTrigger>();
-        if (trigger != null)
-            trigger.enabled = false;
-        }
+    }
 }
