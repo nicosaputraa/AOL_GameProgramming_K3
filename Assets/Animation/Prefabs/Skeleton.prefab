@@ -79,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1238768299
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 6677806975911841103, guid: 572c8537ebc49a1438868b67c68ff621, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -111,14 +111,10 @@ MonoBehaviour:
   knockbackForce: 4
   knockbackDuration: 0.15
   viewRange: 4
-  attackRange: 2.5
-  moveSpeed: 4
-  attackCooldown: 1
-  maxHealth: 3
-  enableWander: 1
-  wanderRadius: 3
-  wanderSpeed: 2
-  wanderDelay: 2
+  attackRange: 2
+  moveSpeed: 6
+  attackCooldown: 1.5
+  maxHealth: 5
 --- !u!50 &3860659085214136593
 Rigidbody2D:
   serializedVersion: 5
