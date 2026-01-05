@@ -8,7 +8,8 @@ public class NPCQuest1 : MonoBehaviour
     {
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            QuestManager.Instance.StartQuest();
+            if (QuestManager.Instance != null)
+                QuestManager.Instance.StartQuest();
         }
     }
 

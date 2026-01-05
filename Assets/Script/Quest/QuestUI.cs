@@ -14,6 +14,12 @@ public class QuestUI : MonoBehaviour
 
     public void Refresh()
     {
+        if (QuestManager.Instance == null)
+        {
+            questText.text = "";
+            return;
+        }
+
         QuestData q = QuestManager.Instance.GetCurrentQuest();
 
         if (q == null)

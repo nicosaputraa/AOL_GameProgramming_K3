@@ -14,4 +14,6 @@ public class QuestData
     public int targetAmount;
     public int currentAmount;
     public bool completed;
+
+    public GameObject memoryPrefab;
 }

@@ -7,7 +7,6 @@ public class QuestManager : MonoBehaviour
 
     public List<QuestData> quests = new List<QuestData>();
     public int currentQuestIndex = 0;
-
     public bool questActive = false;
 
     void Awake()
@@ -26,7 +25,9 @@ public class QuestManager : MonoBehaviour
     public void StartQuest()
     {
         questActive = true;
-        QuestUI.Instance.Refresh();
+
+        if (QuestUI.Instance != null)
+            QuestUI.Instance.Refresh();
     }
 
     public void AddProgress(string targetID)
@@ -42,12 +43,16 @@ public class QuestManager : MonoBehaviour
         if (q.currentAmount >= q.targetAmount)
         {
             q.completed = true;
-            MemoryManager.Instance.UnlockNextMemory();
+
+            if (q.memoryPrefab != null && MemorySpawner.Instance != null)
+                MemorySpawner.Instance.SpawnMemoryNearPlayer(q.memoryPrefab);
+
             NextQuest();
             return;
         }
 
-        QuestUI.Instance.Refresh();
+        if (QuestUI.Instance != null)
+            QuestUI.Instance.Refresh();
     }
 
     public void NextQuest()
@@ -57,10 +62,12 @@ public class QuestManager : MonoBehaviour
         if (currentQuestIndex >= quests.Count)
         {
             questActive = false;
-            QuestUI.Instance.Refresh();
+            if (QuestUI.Instance != null)
+                QuestUI.Instance.Refresh();
             return;
         }
 
-        QuestUI.Instance.Refresh();
+        if (QuestUI.Instance != null)
+            QuestUI.Instance.Refresh();
     }
 }
