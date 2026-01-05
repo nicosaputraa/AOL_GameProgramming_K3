@@ -10,11 +10,12 @@ TagManager:
   - Heart
   - Memory
   - Collectible
+  - Boss
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - wall
   - Water
   - UI
   - Enemy

@@ -1,16 +1,24 @@
 using UnityEngine;
 
-public class NPCQuest1 : MonoBehaviour
+public class NPCQuest : MonoBehaviour
 {
+    public int questIndex; // quest ke berapa yang dia aktifkan
     bool playerInRange;
 
     void Update()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.E))
+        if (!playerInRange) return;
+        if (!Input.GetKeyDown(KeyCode.E)) return;
+
+        if (QuestManager.Instance == null) return;
+
+        if (QuestManager.Instance.currentQuestIndex != questIndex)
         {
-            if (QuestManager.Instance != null)
-                QuestManager.Instance.StartQuest();
+            Debug.Log("Quest belum tersedia.");
+            return;
         }
+
+        QuestManager.Instance.StartQuest();
     }
 
     void OnTriggerEnter2D(Collider2D col)

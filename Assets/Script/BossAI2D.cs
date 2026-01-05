@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BossAI2D : MonoBehaviour
 {
-    
+    public string bossID = "Boss";
     public Transform player;
     private bool playerInsideRoom = false;
     private bool returningToSpawn = false;
@@ -117,6 +117,9 @@ public class BossAI2D : MonoBehaviour
 
     public void SetPlayerInsideRoom(bool inside)
     {
+        if (this == null || isDead) return;     // ⬅ PROTEKSI UTAMA
+        if (animator == null) return;
+
         playerInsideRoom = inside;
 
         if (!inside)
@@ -228,11 +231,30 @@ public class BossAI2D : MonoBehaviour
     }
 
 
-    void Die()
+        void Die()
     {
+        if (isDead) return;
+
         isDead = true;
+
         animator.SetBool("IsDead", true);
         rb.linearVelocity = Vector2.zero;
         rb.simulated = false;
-    }
+
+        // MATIKAN COLLIDER BIAR GA ADA GHOST HITBOX
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
+            col.enabled = false;
+
+        // LAPOR KE QUEST
+        if (QuestManager.Instance != null)
+            QuestManager.Instance.AddProgress(bossID);
+
+        // HANCURKAN SETELAH ANIMASI SELESAI
+        Destroy(gameObject, 1.5f);
+
+        BossRoomTrigger trigger = FindObjectOfType<BossRoomTrigger>();
+        if (trigger != null)
+            trigger.enabled = false;
+        }
 }
