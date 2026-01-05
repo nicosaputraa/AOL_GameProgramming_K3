@@ -12,7 +12,6 @@ public class BossGate : MonoBehaviour
         if (bossSpawned) return;
         if (QuestManager.Instance == null) return;
 
-        // Unlock setelah 3 quest selesai
         if (QuestManager.Instance.currentQuestIndex >= 3)
         {
             SpawnBoss();

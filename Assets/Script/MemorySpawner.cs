@@ -33,7 +33,7 @@ public class MemorySpawner : MonoBehaviour
             }
         }
 
-        // fallback: spawn tepat di depan player
+        
         Vector2 safePos = (Vector2)player.transform.position + Vector2.right;
         Instantiate(memoryPrefab, safePos, Quaternion.identity);
     }

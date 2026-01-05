@@ -12,12 +12,12 @@ public class VolumeSettings : MonoBehaviour
     public Slider MasterSlider;
 
     [Header("Keys")]
-    // Nama parameter yang kita expose di AudioMixer
+    
     private const string MIXER_MASTER = "VolMaster";
     private const string MIXER_MUSIC = "VolMusic";
     private const string MIXER_EFFECT = "VolEffect";
     private const string MIXER_DIALOG = "VolDialog";
-    // Key untuk menyimpan data di PlayerPrefs
+    
     private const string PREF_MASTER = "MasterVolume";
     private const string PREF_MUSIC = "MusicVolume";
     private const string PREF_EFFECT = "EffectVolume";
@@ -25,13 +25,13 @@ public class VolumeSettings : MonoBehaviour
 
     private void Start()
     {
-        // Load saved volumes and set sliders and mixer
+        
         LoadAndApplyVolumes();
     }
 
     private void LoadAndApplyVolumes()
     {
-        // Master Volume
+        
         float masterVol = PlayerPrefs.GetFloat(PREF_MASTER, 1f);
         if (MasterSlider != null)
         {
@@ -40,7 +40,7 @@ public class VolumeSettings : MonoBehaviour
         }
         AudioMixer.SetFloat(MIXER_MASTER, Mathf.Log10(masterVol) * 20);
 
-        // Music Volume
+        
         float musicVol = PlayerPrefs.GetFloat(PREF_MUSIC, 1f);
         if (MusicSlider != null)
         {
@@ -49,7 +49,7 @@ public class VolumeSettings : MonoBehaviour
         }
         AudioMixer.SetFloat(MIXER_MUSIC, Mathf.Log10(musicVol) * 20);
 
-        // Effect Volume
+        
         float effectVol = PlayerPrefs.GetFloat(PREF_EFFECT, 1f);
         if (EffectSlider != null)
         {
@@ -58,7 +58,7 @@ public class VolumeSettings : MonoBehaviour
         }
         AudioMixer.SetFloat(MIXER_EFFECT, Mathf.Log10(effectVol) * 20);
 
-        // Dialog Volume
+        
         float dialogVol = PlayerPrefs.GetFloat(PREF_DIALOG, 1f);
         if (DialogSlider != null)
         {

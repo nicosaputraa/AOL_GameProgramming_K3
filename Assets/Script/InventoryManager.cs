@@ -11,7 +11,7 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
-        // Membuat slot kosong saat game mulai
+        
         for (int i = 0; i < totalSlots; i++)
         {
             GameObject newSlot = Instantiate(slotPrefab, inventoryPanel);
@@ -23,7 +23,7 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItem(string itemName, Sprite itemIcon)
     {
-        // 1. Cek Stack: Apakah barang sudah ada?
+        
         foreach (InventorySlot slot in slots)
         {
             if (slot.isOccupied && slot.itemName == itemName)
@@ -33,7 +33,7 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        // 2. Cek Kosong: Cari slot baru
+        
         foreach (InventorySlot slot in slots)
         {
             if (!slot.isOccupied)

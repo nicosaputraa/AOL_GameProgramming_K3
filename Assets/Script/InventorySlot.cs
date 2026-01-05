@@ -29,7 +29,7 @@ public class InventorySlot : MonoBehaviour
 
     void UpdateText()
     {
-        // Tampilkan angka hanya jika lebih dari 1
+        
         countText.text = (count > 1) ? count.ToString() : "";
     }
 

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BossActivator : MonoBehaviour
 {
-    public GameObject bossObject;     // drag boss object (child)
+    public GameObject bossObject;  
     public MonoBehaviour bossAI;
     public Collider2D bossCollider;
     public Animator bossAnimator;

@@ -10,10 +10,10 @@ public class MenuManager : MonoBehaviour
     public Button btnQuit;
 
     [Header("Panel References")]
-    public GameObject optionPanel; // Optional: jika ada panel option
+    public GameObject optionPanel; 
 
     [Header("Scene Settings")]
-    public string gameSceneName = "MapScene"; // ✅ Nama scene game Anda
+    public string gameSceneName = "MapScene"; 
 
     void Start()
     {
@@ -27,7 +27,7 @@ public class MenuManager : MonoBehaviour
         if (btnQuit != null)
             btnQuit.onClick.AddListener(QuitGame);
 
-        // Hide option panel at start (if exists)
+        
         if (optionPanel != null)
             optionPanel.SetActive(false);
     }
@@ -42,7 +42,7 @@ public class MenuManager : MonoBehaviour
     public void OpenOptions()
     {
         Debug.Log("Opening options...");
-        // Show option panel
+        
         if (optionPanel != null)
             optionPanel.SetActive(true);
     }
@@ -50,7 +50,7 @@ public class MenuManager : MonoBehaviour
     public void CloseOptions()
     {
         Debug.Log("Closing options...");
-        // Hide option panel
+        
         if (optionPanel != null)
             optionPanel.SetActive(false);
     }
@@ -68,7 +68,7 @@ public class MenuManager : MonoBehaviour
 
     void OnDestroy()
     {
-        // Remove listeners saat object dihancurkan
+        
         if (btnStart != null)
             btnStart.onClick.RemoveListener(StartGame);
         

@@ -149,10 +149,8 @@ public class BossAI2D : MonoBehaviour
 
         currentHP -= damage;
 
-        // ===== FIX BUG ATTACK TERKUNCI =====
-        isAttacking = false;                            // BARIS BARU
-        CancelInvoke(nameof(DealDamageToPlayer));       // BARIS BARU
-        // =================================
+        isAttacking = false;                            
+        CancelInvoke(nameof(DealDamageToPlayer));       
 
         isHurt = true;
         hurtTimer = hurtDuration;

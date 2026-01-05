@@ -35,7 +35,7 @@ public class VisionRoomController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Masuk ruangan besar
+        
         if (other.CompareTag("LargeRoom"))
         {
             targetSize = largeRoomSize;
@@ -44,7 +44,7 @@ public class VisionRoomController : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        // Keluar ruangan besar
+        
         if (other.CompareTag("LargeRoom"))
         {
             targetSize = normalSize;

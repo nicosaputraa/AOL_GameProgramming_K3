@@ -22,9 +22,7 @@ public class EnemyAI2D : MonoBehaviour
 
     [Header("Attack")]
     public float attackCooldown = 0.5f;
-    // --- TAMBAHAN BARU 1: Variabel Damage Musuh ---
     public float damageToPlayer = 5f; 
-    // ----------------------------------------------
     float lastAttackTime;
 
     [Header("Health")]
@@ -73,8 +71,6 @@ public class EnemyAI2D : MonoBehaviour
             animator.SetTrigger("Attack");
             lastAttackTime = Time.time;
 
-            // --- TAMBAHAN BARU 2: Logika Mengurangi Darah Player ---
-            // Kita cek apakah player ada script PlayerStats, lalu panggil TakeDamage
             if (player != null)
             {
                 PlayerStats stats = player.GetComponent<PlayerStats>();
@@ -83,7 +79,6 @@ public class EnemyAI2D : MonoBehaviour
                     stats.TakeDamage(damageToPlayer);
                 }
             }
-            // --------------------------------------------------------
         }
     }
 

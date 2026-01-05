@@ -19,7 +19,7 @@ public class BossRoomTrigger : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (boss == null) return;   // ⬅ boss sudah mati
+        if (boss == null) return; 
         if (other.CompareTag("Player"))
             boss.SetPlayerInsideRoom(false);
     }

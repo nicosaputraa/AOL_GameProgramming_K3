@@ -15,21 +15,21 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Ambil input WASD
+        
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        // Kirim ke animator
+        
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
 
-        // Untuk menentukan idle / jalan
+        
         animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
     void FixedUpdate()
     {
-        // Gerakkan karakter
+        
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 

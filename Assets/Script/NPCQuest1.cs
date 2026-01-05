@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class NPCQuest : MonoBehaviour
 {
-    public int questIndex; // quest ke berapa yang dia aktifkan
+    public int questIndex; 
     bool playerInRange;
 
     void Update()

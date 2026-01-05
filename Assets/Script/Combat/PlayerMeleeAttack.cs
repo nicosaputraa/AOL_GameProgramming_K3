@@ -40,7 +40,6 @@ public class PlayerMeleeAttack : MonoBehaviour
 
         foreach (Collider2D hit in hits)
         {
-            // === Enemy biasa ===
             EnemyAI2D enemy = hit.GetComponentInParent<EnemyAI2D>();
             if (enemy != null)
             {
@@ -48,7 +47,6 @@ public class PlayerMeleeAttack : MonoBehaviour
                 continue;
             }
 
-            // === Boss ===
             BossAI2D boss = hit.GetComponentInParent<BossAI2D>();
             if (boss != null)
             {

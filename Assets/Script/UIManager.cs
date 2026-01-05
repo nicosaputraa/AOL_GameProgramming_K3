@@ -6,26 +6,26 @@ using UnityEngine.Audio;
 public class GameUIManager : MonoBehaviour
 {
     [Header("UI References")]
-    public GameObject popupPanel; // Panel Popup yang berisi slider & tombol quit
-    public Slider masterSlider;   // Slider volume
-    public Slider musicSlider; // Slider untuk Group A
-    public Slider effectSlider; // Slider untuk Group B
-    public Slider dialogSlider; // Slider untuk Group B
+    public GameObject popupPanel; 
+    public Slider masterSlider;   
+    public Slider musicSlider; 
+    public Slider effectSlider; 
+    public Slider dialogSlider; 
 
     [Header("Scene Settings")]
     public string menuSceneName = "MenuScene";
 
     [Header("Audio Settings")]
-    public AudioMixer AudioMixer; // Masukkan MainMixer di sini
+    public AudioMixer AudioMixer; 
     private bool result;
 
     void Start()
     {
-        // 1. Pastikan Popup tertutup saat game mulai
+        
         if (popupPanel != null)
             popupPanel.SetActive(false);
 
-        // 2. Setup Slider agar sesuai volume saat ini
+        
         if (masterSlider != null)
         {
             masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1f);
@@ -48,7 +48,7 @@ public class GameUIManager : MonoBehaviour
         }
     }
 
-    // Fungsi untuk Mixer
+    
     public void SetLevelMaster(float sliderValue)
     {
         AudioMixer.SetFloat("VolMaster", Mathf.Log10(sliderValue) * 20);
@@ -73,50 +73,50 @@ public class GameUIManager : MonoBehaviour
         PlayerPrefs.SetFloat("DialogVolume", sliderValue);
         PlayerPrefs.Save();
     }
-    // --- FUNGSI UNTUK TOMBOL ---
+    
 
-    // 1. Dipasang di 'Btn_OpenMenu'
+    
     public void OpenMenu()
     {
         if (popupPanel != null)
         {
-            popupPanel.SetActive(true); // Munculkan Popup
-            Time.timeScale = 0f;        // BEKU-kan waktu (Pause Game)
+            popupPanel.SetActive(true); 
+            Time.timeScale = 0f;        
         }
     }
 
-    // 2. Dipasang di 'Btn_Resume' (Di dalam Popup)
+    
     public void ResumeGame()
     {
         if (popupPanel != null)
         {
-            popupPanel.SetActive(false); // Sembunyikan Popup
-            Time.timeScale = 1f;         // JALAN-kan waktu kembali (Unpause)
+            popupPanel.SetActive(false); 
+            Time.timeScale = 1f;         
         }
     }
 
-    // 3. Dipasang di 'Btn_Quit' (Di dalam Popup)
+    
     public void QuitToMainMenu()
     {
-        // PENTING: Kembalikan waktu ke normal sebelum pindah scene
-        // Kalau tidak, scene Menu nanti akan ikut beku (freeze)
+        
+        
         Time.timeScale = 1f; 
         
         SceneManager.LoadScene(menuSceneName);
     }
 
-    // 4. Logika Slider Volume
+    
     public void SetVolume(float volume)
     {
         AudioListener.volume = volume;
     }
-    // 5. Dipasang di BackButton (Lobby)
+    
     public void BackButton()
     {
         if (popupPanel != null)
         {
-            popupPanel.SetActive(false); // Tutup panel
-            Time.timeScale = 1f;         // Pastikan game jalan
+            popupPanel.SetActive(false); 
+            Time.timeScale = 1f;         
         }
     }
 

@@ -3,9 +3,9 @@ using TMPro;
 
 public class QuestNPC : MonoBehaviour
 {
-    public int questIndex;                      // 0 = skeleton, 1 = boss
-    public GameObject dialogUI;                 // panel dialog
-    public TextMeshProUGUI questText;           // TextMeshPro quest description
+    public int questIndex;                     
+    public GameObject dialogUI;                 
+    public TextMeshProUGUI questText;           
     public string lockedText = "Quest ini belum tersedia.";
 
     bool playerNear;
@@ -19,7 +19,7 @@ public class QuestNPC : MonoBehaviour
 
     void Update()
     {
-        // Tutup dialog / accept quest pakai E
+
         if (dialogOpen && Input.GetKeyDown(KeyCode.E))
         {
             AcceptQuest();
@@ -30,7 +30,7 @@ public class QuestNPC : MonoBehaviour
         if (!Input.GetKeyDown(KeyCode.E)) return;
         if (QuestManager.Instance == null) return;
 
-        // ❌ Quest belum waktunya
+ 
         if (QuestManager.Instance.currentQuestIndex != questIndex)
         {
             if (dialogUI != null && questText != null)
