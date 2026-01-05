@@ -1040,7 +1040,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -395.24002, y: -253.09998}
+  m_AnchoredPosition: {x: -380, y: -166}
   m_SizeDelta: {x: -817.25, y: -546.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &178351397
@@ -1611,7 +1611,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 332.14996}
+  m_AnchoredPosition: {x: 2, y: 183}
   m_SizeDelta: {x: 253.49, y: 37.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &342003805
@@ -1640,7 +1640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.43137255}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6064,7 +6064,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -569.24, y: 324.05}
+  m_AnchoredPosition: {x: -298, y: 183}
   m_SizeDelta: {x: 159.25, y: 36.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1013381830
@@ -99372,7 +99372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -113038,7 +113038,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -46.700012, y: -51.899994}
+  m_AnchoredPosition: {x: -48.9, y: -46}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1847329451
@@ -114941,11 +114941,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1288021869506990874, guid: 49adb67570c805e4b8411dd40c304562, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.25
+      value: -36.7
       objectReference: {fileID: 0}
     - target: {fileID: 1288021869506990874, guid: 49adb67570c805e4b8411dd40c304562, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.26
+      value: -8.88
       objectReference: {fileID: 0}
     - target: {fileID: 1288021869506990874, guid: 49adb67570c805e4b8411dd40c304562, type: 3}
       propertyPath: m_LocalPosition.z
