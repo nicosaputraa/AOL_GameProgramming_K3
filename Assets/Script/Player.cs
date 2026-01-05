@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public InventoryManager inventoryManager;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Heart"))
@@ -25,6 +27,20 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(memory.memorySceneName, LoadSceneMode.Additive);
 
             Destroy(other.gameObject);
+        }
+        else if (other.CompareTag("Collectible"))
+        {
+            CollectibleItem item = other.GetComponent<CollectibleItem>();
+
+            if (item == null)
+            {
+                Debug.LogError("Collectible tidak punya CollectibleItem!");
+                return;
+            }
+
+            inventoryManager.AddItem(item.itemName, item.icon);
+            Destroy(other.gameObject);
+            Debug.Log("Collected: " + item.itemName);
         }
     }
 }
