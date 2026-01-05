@@ -1,8 +1,23 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+   
+    void Start()
+    {
+        
+    }
+
+    void Update()
+    {
+       
+    }
+
+    void FixedUpdate()
+    {
+
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Heart"))
@@ -12,19 +27,8 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("Memory"))
         {
-            MemoryData memory = other.GetComponent<MemoryData>();
-
-            if (memory == null)
-            {
-                Debug.LogError("Memory tidak punya MemoryData!");
-                return;
-            }
-
-            Debug.Log("Memory Fragment Collected: " + memory.memorySceneName);
-
-            SceneManager.LoadScene(memory.memorySceneName, LoadSceneMode.Additive);
-
             Destroy(other.gameObject);
+            Debug.Log("Memory Fragments Collected");
         }
     }
 }
