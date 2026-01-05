@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Heart
   - Memory
+  - Collectible
   layers:
   - Default
   - TransparentFX
